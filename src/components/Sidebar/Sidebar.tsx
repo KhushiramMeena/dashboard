@@ -8,22 +8,15 @@ import {
   ListItemText,
   Typography,
   Box,
-  Collapse,
-  IconButton,
 } from "@mui/material";
 import {
   Dashboard as DashboardIcon,
   ShoppingCart as ShoppingCartIcon,
   Folder as FolderIcon,
-  School as SchoolIcon,
   Person as PersonIcon,
   Campaign as CampaignIcon,
   Description as DescriptionIcon,
   People as PeopleIcon,
-  AccountBalance as AccountBalanceIcon,
-  Business as BusinessIcon,
-  Article as ArticleIcon,
-  Share as ShareIcon,
   ExpandLess,
   ExpandMore,
   Star as StarIcon,
@@ -89,7 +82,12 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
       title: "Dashboards",
       expandable: true,
       items: [
-        { text: "Default", icon: <DashboardIcon />, path: "/default", active: true },
+        {
+          text: "Default",
+          icon: <DashboardIcon />,
+          path: "/default",
+          active: true,
+        },
         { text: "eCommerce", icon: <ShoppingCartIcon />, path: "/ecommerce" },
         { text: "Order List", icon: <DescriptionIcon />, path: "/orders" },
       ],
@@ -99,7 +97,6 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
       expandable: true,
       items: [
         { text: "User Profile", icon: <PersonIcon />, path: "/profile" },
-        { text: "Overview", icon: <StarIcon />, path: "/new" },
         { text: "Projects", icon: <FolderIcon />, path: "/projects" },
         { text: "Campaigns", icon: <CampaignIcon />, path: "/campaigns" },
         { text: "Documents", icon: <DescriptionIcon />, path: "/documents" },
@@ -255,7 +252,9 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
                               boxShadow: isSpecial
                                 ? "0 6px 16px rgba(0, 0, 0, 0.15)"
                                 : "none",
-                              transform: isSpecial ? "translateY(-2px)" : "none",
+                              transform: isSpecial
+                                ? "translateY(-2px)"
+                                : "none",
                             },
                             transition: "all 0.3s ease",
                           }}

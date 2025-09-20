@@ -55,15 +55,17 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
         transition: "background-color 0.3s ease, border-color 0.3s ease",
       }}
     >
-      <Toolbar sx={{
-        height: "100%",
-        padding: {
-          xs: "0 16px",
-          sm: "0 20px",
-          md: "0 24px",
-        },
-        minHeight: "auto",
-      }}>
+      <Toolbar
+        sx={{
+          height: "100%",
+          padding: {
+            xs: "0 16px",
+            sm: "0 20px",
+            md: "0 24px",
+          },
+          minHeight: "auto",
+        }}
+      >
         {/* Left side - ByeWind logo, Menu button and breadcrumbs */}
         <Box sx={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
           {/* ByeWind Logo */}
@@ -195,7 +197,13 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
               pointerEvents: "none",
             }}
           >
-            <SearchIcon sx={{ color: isDarkMode ? "#b0b0b0" : "#999", marginRight: "8px", fontSize: "20px" }} />
+            <SearchIcon
+              sx={{
+                color: isDarkMode ? "#b0b0b0" : "#999",
+                marginRight: "8px",
+                fontSize: "20px",
+              }}
+            />
             <InputBase
               placeholder="Search"
               sx={{
@@ -228,15 +236,17 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
         </Box>
 
         {/* Right side - Utility icons */}
-        <Box sx={{
-          display: "flex",
-          alignItems: "center",
-          gap: {
-            xs: "4px",
-            sm: "6px",
-            md: "8px",
-          },
-        }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: {
+              xs: "4px",
+              sm: "6px",
+              md: "8px",
+            },
+          }}
+        >
           <IconButton
             sx={{
               color: isDarkMode ? "#b0b0b0" : "#666",
